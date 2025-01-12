@@ -385,45 +385,4 @@ $(document).ready(function () {
         filter: '*'
     });
 });
-document.querySelectorAll('.gallery-link').forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();  // 阻止預設行為
-
-        // 取得資料中的圖片URL
-        var imageUrl = link.getAttribute('data-image');
-
-        // 顯示 Lightbox 並設置背景圖片
-        var lightbox = document.getElementById('lightbox');
-        var lightboxContent = document.getElementById('lightbox-content');
-        lightbox.style.display = 'flex';  // 顯示 Lightbox
-        lightboxContent.style.backgroundImage = 'url(' + imageUrl + ')';
-    });
-});
-
-// 當點擊圖片的連結時觸發
-document.querySelectorAll('.gallery-link').forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();  // 阻止預設行為
-
-        // 取得資料中的圖片URL
-        var imageUrl = link.getAttribute('data-image');
-
-        // 顯示 Lightbox 並設置背景圖片
-        var lightbox = document.getElementById('lightbox');
-        var lightboxContent = document.getElementById('lightbox-content');
-        lightbox.style.display = 'flex';  // 顯示 Lightbox
-        lightboxContent.style.backgroundImage = 'url(' + imageUrl + ')';
-    });
-});
-
-// 當點擊關閉按鈕時隱藏 Lightbox
-document.getElementById('close-lightbox').addEventListener('click', function() {
-    document.getElementById('lightbox').style.display = 'none';  // 隱藏 Lightbox
-});
-
-// 當點擊 Lightbox 背景區域時，也隱藏 Lightbox
-document.getElementById('lightbox').addEventListener('click', function(event) {
-    if (event.target === this) {
-        document.getElementById('lightbox').style.display = 'none';  // 隱藏 Lightbox
-    }
-});
+ 
