@@ -1,5 +1,5 @@
 <?php
-$subject    = 'E-mail from example'; // Subject of your email
+$subject    = 'E-mail from example';  
 $to         = 'e-mail@a411757@gmail.com'; //Your e-mail address
 $headers    = 'MIME-Version: 1.0' . "\r\n" .
               'Content-type: text/html; charset=iso-8859-1' . "\r\n";
