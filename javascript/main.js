@@ -386,17 +386,33 @@ $(document).ready(function () {
     });
 });
   // 初始化 EmailJS
-  emailjs.init("RvmnIgqG2GJBGiEl_"); // 🔹 用 EmailJS Public Key 替換 "YOUR_PUBLIC_KEY"
+  emailjs.init("RvmnIgqG2GJBGiEl_"); // 替換為你的 EmailJS Public Key
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // 防止表單刷新
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // 防止表單刷新
 
-      emailjs.sendForm("service_73tjuvb", "template_p0fotos", this)
-          .then(function(response) {
-              alert("謝謝你的訊息");
-              console.log("SUCCESS!", response.status, response.text);
-          }, function(error) {
-              alert("傳送訊息失敗");
-              console.log("FAILED...", error);
-          });
-  });
+        // 獲取按鈕
+        let submitButton = document.querySelector(".submit-button");
+        submitButton.innerText = "發送中..."; // 🔥 改變按鈕文字
+        submitButton.disabled = true; // 🔥 禁用按鈕，避免重複點擊
+
+        emailjs.sendForm("service_73tjuvb", "template_p0fotos", this)
+            .then(function(response) {
+                alert("訊息已成功發送！");
+                console.log("SUCCESS!", response.status, response.text);
+
+                // ✅ 重置按鈕
+                submitButton.innerText = "發送訊息";
+                submitButton.disabled = false;
+
+                // ✅ 重置表單
+                document.getElementById("contact-form").reset();
+            }, function(error) {
+                alert("發送失敗，請稍後再試！");
+                console.log("FAILED...", error);
+
+                // ✅ 如果失敗，恢復按鈕狀態
+                submitButton.innerText = "發送訊息";
+                submitButton.disabled = false;
+            });
+    });

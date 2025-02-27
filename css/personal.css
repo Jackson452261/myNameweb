@@ -8,3 +8,8 @@
     font-size: 1.2rem !important; /* 🔥 hover 時字體變大 */
     transition: 1.3s;
 }
+
+.submit-button:disabled {
+    background-color: gray !important;
+    cursor: not-allowed;
+}
