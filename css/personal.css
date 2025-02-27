@@ -1,3 +1,10 @@
  .custom-text{
      font-size: 18px !important;
  }
+
+ .custom-btn:hover {
+    background-color: red !important; /* 🔥 hover 時背景變紅色 */
+    color: white !important; /* 🔥 文字變白色 */
+    font-size: 1.2rem !important; /* 🔥 hover 時字體變大 */
+    transition: 1.3s;
+}

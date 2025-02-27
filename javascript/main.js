@@ -385,4 +385,18 @@ $(document).ready(function () {
         filter: '*'
     });
 });
- 
+  // 初始化 EmailJS
+  emailjs.init("RvmnIgqG2GJBGiEl_"); // 🔹 用 EmailJS Public Key 替換 "YOUR_PUBLIC_KEY"
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // 防止表單刷新
+
+      emailjs.sendForm("service_73tjuvb", "template_p0fotos", this)
+          .then(function(response) {
+              alert("謝謝你的訊息");
+              console.log("SUCCESS!", response.status, response.text);
+          }, function(error) {
+              alert("傳送訊息失敗");
+              console.log("FAILED...", error);
+          });
+  });
