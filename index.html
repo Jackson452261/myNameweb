@@ -7,6 +7,17 @@
     <title>曾傳耕</title>
     <meta name="description" content="曾傳耕, 網頁開發, 網頁設計, 部落格分享, 形象官網">
     <meta name="google-site-verification" content="OO1lcxWNyTkDFF2ENuanNrNaS0LPuGYnCQ1YRlWNg5A" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // 在這裡添加你的自定義配置
+                }
+            }
+        }
+    </script>
     <!-- GOOGLE FONT-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
@@ -36,6 +47,16 @@
               <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7R96R8XB6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H7R96R8XB6');
+</script>
 </head>
 <body>
     <!-- LOADDER-->
@@ -410,7 +431,7 @@
                     
                         <div class="col-12">
                         <button type="submit" 
-                        class="submit-button btn btn-lg bg-primary-subtle text-danger px-5 py-3 custom-btn">發送訊息</button>
+                        class="submit-button btn btn-lg bg-primary-subtle text-red-500 px-5 py-3 custom-btn">發送訊息</button>
                         </div>
                     </form>
                     
@@ -421,19 +442,20 @@
     
         <!-- END CONTACT SECTION -->
         <!-- FOOTER -->
+         
         <footer id="footer-wrap">
             <div class="container wrap-foot">
                 
                     <div class="col-lg-6 wrap-contentfoot">
-                        <ul class="sosmed-foot">
+                        <ul class="sosmed-list">
                             <li>
-                                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+                                <a href="#"><i class="bi bi-facebook social-icon" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+                                <a href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i>Twitter</a>
+                                <a href="#"><i class="bi bi-twitter" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </div>
