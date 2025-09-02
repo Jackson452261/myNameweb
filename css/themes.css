@@ -544,9 +544,9 @@ img.img-load {
 
 .wrap-detailrex h3 span {
     font-weight: bold;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #ffffff;
     color: transparent;
-    letter-spacing: 1px;
+    letter-spacing: 1px; 
 }
 
 /*
@@ -1230,14 +1230,6 @@ p.minititle {
     position: relative;
 }
 
-.sosmed-list:before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 150px;
-    left: 0;
-    background: #949494;
-}
 
 .sosmed-list li {
     display: inline-block;

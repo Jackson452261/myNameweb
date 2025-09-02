@@ -14,5 +14,12 @@
     cursor: not-allowed;
 }
 
- 
- 
+#rexido-slide {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.owl-carousel .owl-stage-outer {
+    text-align: left !important;
+}
